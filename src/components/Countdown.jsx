@@ -55,16 +55,6 @@ export default function Countdown() {
           </motion.div>
         ))}
       </div>
-
-      {/* Motivational Text Below Countdown */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-center text-gray-800 dark:text-gray-200 mt-6 text-sm sm:text-base font-medium"
-      >
-        নিজেকে উৎসাহ দাও! JLPT সামনের পথে 🚀
-      </motion.div>
     </div>
   );
 }

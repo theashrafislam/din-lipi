@@ -1,6 +1,7 @@
 import Countdown from "../components/Countdown";
 import Timeline from "../components/Timeline";
 import GlassCard from "../components/GlassCard";
+import Cards from "../components/Cards";
 
 export default function Home({ items, setItems }) {
   const total = items.reduce((a, b) => a + b.duration, 0);
@@ -10,7 +11,7 @@ export default function Home({ items, setItems }) {
       {/* <GlassCard> */}
         <Countdown />
       {/* </GlassCard> */}
-
+<Cards />
       {/* <GlassCard>
         <div>Total Today: {total} min</div>
       </GlassCard>
