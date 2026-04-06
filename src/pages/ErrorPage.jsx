@@ -2,9 +2,10 @@ import React from "react";
 
 const ErrorPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-600 to-indigo-500 text-white p-6">
-      {/* AR Icon */}
-      <div className="bg-white/10 rounded-full p-6 mb-8 animate-bounce">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-600 to-indigo-500 text-white p-6 relative">
+      
+      {/* AR আইকন */}
+      <div className="bg-white/10 rounded-full p-6 mb-8 animate-bounce shadow-lg">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-16 w-16 text-white"
@@ -21,13 +22,13 @@ const ErrorPage = () => {
         </svg>
       </div>
 
-      {/* Error Text */}
+      {/* Error Message */}
       <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-center">
-        Oops!
+        দুঃখিত!
       </h1>
-      <p className="text-lg md:text-xl mb-8 text-center max-w-lg">
-        Something went wrong while launching the AR experience. Don’t worry,
-        you can try refreshing the page or returning to the main menu.
+      <p className="text-lg md:text-xl mb-8 text-center max-w-md">
+        অভিজ্ঞতা চালু করার সময় কিছু সমস্যা হয়েছে। 
+        তুমি পেজ রিফ্রেশ করতে পারো অথবা হোম পেজে ফিরতে পারো।
       </p>
 
       {/* Buttons */}
@@ -36,17 +37,17 @@ const ErrorPage = () => {
           onClick={() => window.location.reload()}
           className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-white/90 transition"
         >
-          Retry
+          আবার চেষ্টা করো
         </button>
         <button
           onClick={() => window.location.href = '/'}
           className="bg-purple-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-purple-700 transition"
         >
-          Home
+          হোমে ফিরে যাও
         </button>
       </div>
 
-      {/* Decorative AR elements */}
+      {/* AR-style Decorative Dots */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute w-2 h-2 bg-white rounded-full animate-ping opacity-50" style={{ top: "10%", left: "20%" }} />
         <div className="absolute w-3 h-3 bg-white rounded-full animate-ping opacity-50" style={{ top: "70%", left: "80%" }} />

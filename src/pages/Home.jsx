@@ -1,9 +1,10 @@
 import React from 'react';
+import LearningSection from '../components/LearningSection';
 
 const Home = () => {
     return (
         <div>
-            hello
+            <LearningSection />
         </div>
     );
 };

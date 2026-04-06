@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FiHome, FiBarChart2, FiEdit, FiSettings, FiPlus } from "react-icons/fi";
 
 export default function Navbar({ tab, setTab, onAdd }) {
@@ -10,39 +9,34 @@ export default function Navbar({ tab, setTab, onAdd }) {
   ];
 
   return (
-    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-lg flex justify-between items-center bg-white/20 dark:bg-black/30 backdrop-blur-xl rounded-3xl p-3 shadow-xl z-50">
-      {tabs.map((t, i) => (
+    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-lg flex justify-between items-center bg-white/30 dark:bg-black/40 backdrop-blur-xl rounded-3xl p-3 shadow-xl z-50">
+      {tabs.map((t) => (
         <button
           key={t.key}
           onClick={() => setTab(t.key)}
-          className="relative flex-1 flex justify-center items-center"
+          className="relative flex-1 flex flex-col items-center justify-center"
         >
-          <motion.div
-            whileTap={{ scale: 0.8 }}
-            className="flex flex-col items-center justify-center text-gray-700 dark:text-gray-300"
+          <div
+            className={`flex flex-col items-center justify-center transition-all duration-200 ${tab === t.key ? "text-purple-500" : "text-gray-700 dark:text-gray-300"
+              }`}
           >
             {t.icon}
-            {/* Active indicator */}
-            {tab === t.key && (
-              <motion.div
-                layoutId="activeTab"
-                className="w-2 h-2 bg-purple-500 rounded-full mt-1"
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              />
-            )}
-          </motion.div>
+            {/* Active tab indicator */}
+            <span
+              className={`mt-1 w-2 h-2 rounded-full transition-all duration-200 ${tab === t.key ? "bg-purple-500 scale-100" : "bg-transparent scale-0"
+                }`}
+            ></span>
+          </div>
         </button>
       ))}
 
       {/* Center FAB Add Button */}
-      <button
+      {/* <button
         onClick={onAdd}
-        className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-purple-500 hover:bg-purple-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-xl"
+        className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-purple-500 hover:bg-purple-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-xl transition-all duration-150 active:scale-95"
       >
-        <motion.div whileTap={{ scale: 0.9 }}>
-          <FiPlus size={28} />
-        </motion.div>
-      </button>
+        <FiPlus size={28} />
+      </button> */}
     </div>
   );
 }
