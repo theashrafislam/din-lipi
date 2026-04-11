@@ -2,13 +2,13 @@ import React from "react";
 
 const ErrorPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-600 to-indigo-500 text-white p-6 relative">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800 p-6">
       
-      {/* AR আইকন */}
-      <div className="bg-white/10 rounded-full p-6 mb-8 animate-bounce shadow-lg">
+      {/* Icon */}
+      <div className="bg-gray-200 rounded-full p-5 mb-6 shadow">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-16 w-16 text-white"
+          className="h-12 w-12 text-gray-600"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -23,35 +23,27 @@ const ErrorPage = () => {
       </div>
 
       {/* Error Message */}
-      <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-center">
+      <h1 className="text-3xl md:text-4xl font-bold mb-3 text-center">
         দুঃখিত!
       </h1>
-      <p className="text-lg md:text-xl mb-8 text-center max-w-md">
-        অভিজ্ঞতা চালু করার সময় কিছু সমস্যা হয়েছে। 
-        তুমি পেজ রিফ্রেশ করতে পারো অথবা হোম পেজে ফিরতে পারো।
+      <p className="text-base md:text-lg mb-6 text-center max-w-md text-gray-600">
+        কিছু সমস্যা হয়েছে। তুমি পেজ রিফ্রেশ করতে পারো অথবা হোম পেজে ফিরে যেতে পারো।
       </p>
 
       {/* Buttons */}
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-3">
         <button
           onClick={() => window.location.reload()}
-          className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-white/90 transition"
+          className="bg-gray-800 text-white px-5 text-nowrap py-2 rounded-md hover:bg-gray-700 transition"
         >
           আবার চেষ্টা করো
         </button>
         <button
-          onClick={() => window.location.href = '/'}
-          className="bg-purple-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-purple-700 transition"
+          onClick={() => (window.location.href = "/")}
+          className="bg-white border border-gray-300 px-5 text-nowrap py-2 rounded-md hover:bg-gray-100 transition"
         >
           হোমে ফিরে যাও
         </button>
-      </div>
-
-      {/* AR-style Decorative Dots */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute w-2 h-2 bg-white rounded-full animate-ping opacity-50" style={{ top: "10%", left: "20%" }} />
-        <div className="absolute w-3 h-3 bg-white rounded-full animate-ping opacity-50" style={{ top: "70%", left: "80%" }} />
-        <div className="absolute w-1.5 h-1.5 bg-white rounded-full animate-pulse opacity-70" style={{ top: "50%", left: "50%" }} />
       </div>
     </div>
   );

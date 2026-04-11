@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
-// import ErrorPage from "../Pages/ErrorPage";
 import ErrorPage from "../pages/ErrorPage"
 // import Home from "../pages/Home";
 import Home from "../pages/Home"
@@ -10,7 +9,7 @@ import { vocabularyLessons  } from "../data/lessons";
 export const Router = createBrowserRouter([
     {
         path: '/',
-        // errorElement: <ErrorPage />,
+        errorElement: <ErrorPage />,
         element: <Root />,
         children: [
             {
