@@ -1,10 +1,10 @@
-import { FiHome, FiBarChart2, FiEdit, FiSettings } from "react-icons/fi";
+import { FiHome, FiEdit, FiSettings, FiHelpCircle, FiLayers, FiEdit3, FiFileText } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const tabs = [
     { path: "/", icon: <FiHome size={22} /> },
-    { path: "/stats", icon: <FiBarChart2 size={22} /> },
+    { path: "/exam", icon: <FiFileText size={22} /> },
     { path: "/journal", icon: <FiEdit size={22} /> },
     { path: "/settings", icon: <FiSettings size={22} /> },
   ];
