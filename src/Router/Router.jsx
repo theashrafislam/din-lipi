@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import VocabularyLessonPage from "../Pages/VocabularyLessonPage";
 import { vocabularyLessons  } from "../data/lessons";
 
-export const router = createBrowserRouter([
+export const Router = createBrowserRouter([
     {
         path: '/',
         errorElement: <ErrorPage />,
