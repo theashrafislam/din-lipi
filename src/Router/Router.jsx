@@ -17,8 +17,8 @@ export const Router = createBrowserRouter([
                 element: <Home />
             },
             {
-                // path: "vocabulary-lesson/:id",
-                // element: <VocabularyLessonPage lessonData={vocabularyLessons }/>
+                path: "vocabulary-lesson/:id",
+                element: <VocabularyLessonPage lessonData={vocabularyLessons }/>
             }
         ]
     }

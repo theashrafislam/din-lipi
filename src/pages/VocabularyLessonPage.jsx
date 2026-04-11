@@ -17,7 +17,7 @@ export default function VocabularyLessonPage({ lessonData }) {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 px-4 py-6">
+        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 px-4">
 
             {/* Header */}
             <div className="max-w-3xl mx-auto mb-3">
