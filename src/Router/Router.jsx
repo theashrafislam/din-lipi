@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
 // import ErrorPage from "../Pages/ErrorPage";
-import ErrorPage from "../Pages/ErrorPage"
+import ErrorPage from "../pages/ErrorPage"
 // import Home from "../pages/Home";
-import Home from "../Pages/Home"
-import VocabularyLessonPage from "../Pages/VocabularyLessonPage";
+import Home from "../pages/Home"
+import VocabularyLessonPage from "../pages/VocabularyLessonPage";
 import { vocabularyLessons  } from "../data/lessons";
 
 export const Router = createBrowserRouter([
