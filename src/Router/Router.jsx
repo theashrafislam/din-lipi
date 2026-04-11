@@ -10,7 +10,7 @@ import { vocabularyLessons  } from "../data/lessons";
 export const Router = createBrowserRouter([
     {
         path: '/',
-        errorElement: <ErrorPage />,
+        // errorElement: <ErrorPage />,
         element: <Root />,
         children: [
             {
@@ -18,8 +18,8 @@ export const Router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "vocabulary-lesson/:id",
-                element: <VocabularyLessonPage lessonData={vocabularyLessons }/>
+                // path: "vocabulary-lesson/:id",
+                // element: <VocabularyLessonPage lessonData={vocabularyLessons }/>
             }
         ]
     }
