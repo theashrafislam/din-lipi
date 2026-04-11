@@ -20,7 +20,7 @@ export default function LearningSection() {
   };
 
   return (
-    <section className="w-full max-w-4xl mx-auto mt-8 px-4">
+    <section className="w-full max-w-4xl mx-auto px-4">
       <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-4">
         শেখা শুরু
       </h2>
